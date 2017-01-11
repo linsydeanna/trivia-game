@@ -15,7 +15,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div className="GetData" onClick={() => this.getData()}>GET DATA</div>
       {this.props.children}
       </div>
     );

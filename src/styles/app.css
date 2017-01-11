@@ -1,8 +1,24 @@
-.GetData {
-  border: 2px solid black;
-  width: 100px;
-  height: 100px;
-  margin-top: 100px;
-  cursor: pointer;
-  padding: 10px;
+.HomeMain {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.HomeStart {
+  width: 70%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid;
+  text-align: center;
+}
+
+.table-responsive {
+  width: 30%;
+}
+
+.TableColumn {
+  width: 20%;
+  text-align: center;
 }

@@ -10,7 +10,7 @@ class Home extends Component {
       <div className="Home">
         <Navigation />
         <div className="HomeMain">
-          <HomeStart />
+          {React.cloneElement(this.props.children, this.props)}
           <PlayerList />
         </div>
       </div>

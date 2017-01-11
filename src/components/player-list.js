@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
+import { browserHistory } from 'react-router';
 
 class PlayerList extends Component {
   invitePlayer() {
     console.log("invitePlayer function")
+    browserHistory.push('invitecontainer');
   }
   render() {
     return (
@@ -18,17 +20,17 @@ class PlayerList extends Component {
         <tbody>
           <tr>
             <td className="TableColumn">1</td>
-            <td onClick={() => this.invitePlayer()}>linsydeanna</td>
+            <td className="PlayerName" onClick={() => this.invitePlayer()}>linsydeanna</td>
             <td className="TableColumn">14</td>
           </tr>
           <tr>
             <td className="TableColumn">2</td>
-            <td onClick={() => this.invitePlayer()}>ross</td>
+            <td className="PlayerName" onClick={() => this.invitePlayer()}>ross</td>
             <td className="TableColumn">28</td>
           </tr>
           <tr>
             <td className="TableColumn">3</td>
-            <td onClick={() => this.invitePlayer()}>kimmy</td>
+            <td className="PlayerName" onClick={() => this.invitePlayer()}>kimmy</td>
             <td className="TableColumn">32</td>
           </tr>
         </tbody>

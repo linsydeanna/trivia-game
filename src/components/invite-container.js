@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class HomeStart extends Component {
+class InviteContainer extends Component {
   render() {
     return (
       <div className="HomeLeft">
-        <p>Click on a players name to invite them to play!</p>
+        InviteContainer
       </div>
     );
   }
 }
 
-export default HomeStart;
+export default InviteContainer;

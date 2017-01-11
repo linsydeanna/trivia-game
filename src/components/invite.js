@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import { Well } from 'react-bootstrap';
 
 class Invite extends Component {
   render() {
     return (
-      <div className="Invite">
-        Invite
-      </div>
+      <Well>You have been invited to play by linsydeanna!</Well>
     );
   }
 }

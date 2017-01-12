@@ -1,10 +1,14 @@
+.Login {
+  border: 1px solid black;
+}
+
 .HomeMain {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
 }
 
-.HomeStart {
+.HomeLeft {
   width: 70%;
   height: 90vh;
   display: flex;
@@ -21,4 +25,9 @@
 .TableColumn {
   width: 20%;
   text-align: center;
+}
+
+.PlayerName:hover {
+  font-weight: bold;
+  cursor: pointer;
 }

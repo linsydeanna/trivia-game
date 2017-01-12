@@ -1,10 +1,10 @@
 import Rebase from 're-base';
 
 const base = Rebase.createClass({
-  apiKey: "AIzaSyD6g8ZI_4EUrFrxfEN-EsJeUK-cfC33eZQ",
-  authDomain: "trivia-game-2e1b6.firebaseapp.com",
-  databaseURL: "https://trivia-game-2e1b6.firebaseio.com",
-  storageBucket: "trivia-game-2e1b6.appspot.com",
-  messagingSenderId: "308238361635"
+  apiKey: "AIzaSyDF7a9yA2EBPjSmLNXnK4S6fWa_fMyniEs",
+  authDomain: "star-wars-quiz-game.firebaseapp.com",
+  databaseURL: "https://star-wars-quiz-game.firebaseio.com",
+  storageBucket: "star-wars-quiz-game.appspot.com",
+  messagingSenderId: "576308420404"
 })
 export default base

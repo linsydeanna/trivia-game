@@ -18,6 +18,7 @@ class Login extends Component {
     this.setState({
       user: data.user
     })
+    console.log("this.state.user after setState is ", this.state.user)
   }
 }
 
@@ -33,14 +34,14 @@ class Login extends Component {
             data: {
               name: user.displayName,
               username: user.displayName,
-              available: false,
+              available: true,
               gameswon: 0
             }
-        });
-      })
-    }
-  })
-}
+          });
+        })
+      }
+    })
+  }
 
   render() {
     return (

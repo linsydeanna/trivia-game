@@ -12,8 +12,13 @@ class PlayerList extends Component {
   }
 
   invitePlayer(playerName) {
-    console.log(playerName)
     browserHistory.push('invitecontainer');
+    base.post('invitations', {
+      data: {
+        sender: base.auth().currentUser.displayName,
+        receiver: playerName
+      }
+    });
   }
 
   componentDidMount() {
@@ -25,7 +30,6 @@ class PlayerList extends Component {
   }
 
   render() {
-    console.log("players in render ", this.state.players)
     return (
       <Table responsive>
         <thead>

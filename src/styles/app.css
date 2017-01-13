@@ -12,14 +12,14 @@
   width: 70%;
   height: 90vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   border-right: 1px solid;
   text-align: center;
 }
 
 .table-responsive {
   width: 30%;
+  height: 90vh;
 }
 
 .TableColumn {
@@ -30,4 +30,12 @@
 .PlayerName:hover {
   font-weight: bold;
   cursor: pointer;
+}
+
+.InviteBox {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 100%;
+  padding: 5px;
 }

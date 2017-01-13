@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import base from '../base'
+import { browserHistory } from 'react-router';
 
 class Login extends Component {
   constructor() {
@@ -18,7 +19,6 @@ class Login extends Component {
     this.setState({
       user: data.user
     })
-    console.log("this.state.user after setState is ", this.state.user)
   }
 }
 
@@ -40,6 +40,7 @@ class Login extends Component {
           });
         })
       }
+      browserHistory.push('/home');
     })
   }
 

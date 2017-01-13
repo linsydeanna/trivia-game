@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import base from '../base'
 import { browserHistory } from 'react-router';
+import { Button } from 'react-bootstrap';
 
 class Login extends Component {
   constructor() {
@@ -24,6 +25,7 @@ class Login extends Component {
 
   handleClick(event) {
     event.preventDefault();
+    console.log("this.refs.username.value is ", this.refs.username.value)
     base.authWithOAuthPopup('github', this.authHandler)
     .then(() => {
       const loggedInUser = base.auth().currentUser;
@@ -33,7 +35,7 @@ class Login extends Component {
           base.post(`users/${user.uid}`, {
             data: {
               name: user.displayName,
-              username: user.displayName,
+              username: this.refs.username.value,
               available: true,
               gameswon: 0
             }
@@ -47,7 +49,12 @@ class Login extends Component {
   render() {
     return (
       <div className="Login">
-        <div className="Login" onClick={(event) => this.handleClick(event)}>Log in</div>
+        <form onSubmit={(event) => this.storeUsername(event)}>
+          <input ref="username"/>
+          <Button type="submit" className="Login" onClick={(event) => this.handleClick(event)}>
+            Log in
+          </Button>
+        </form>
       </div>
     );
   }

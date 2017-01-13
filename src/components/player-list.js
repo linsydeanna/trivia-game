@@ -11,16 +11,6 @@ class PlayerList extends Component {
     }
   }
 
-  invitePlayer(playerName) {
-    browserHistory.push('invitecontainer');
-    base.post('invitations', {
-      data: {
-        sender: base.auth().currentUser.displayName,
-        receiver: playerName
-      }
-    });
-  }
-
   componentDidMount() {
     this.rebaseRef = base.syncState('users', {
       context: this,
@@ -29,13 +19,29 @@ class PlayerList extends Component {
     })
   }
 
+  invitePlayer(playerName) {
+    browserHistory.push('invitecontainer');
+  //   var immediatelyAvailableReference = base.push('invitations', {
+  //       data: {
+  //         sender: base.auth().currentUser.displayName,
+  //         receiver: playerName
+  //       },
+  //     then(err){
+  //       console.log(err)
+  //     }
+  //   });
+  //   immediatelyAvailableReference()
+  //   var generatedKey = immediatelyAvailableReference.key;
+  //   console.log("generatedKey ", generatedKey)
+  }
+
   render() {
     return (
       <Table responsive>
         <thead>
           <tr>
             <th className="TableColumn">Rank</th>
-            <th onClick={() => this.getPlayers()}>Player</th>
+            <th>Player</th>
             <th className="TableColumn">Score</th>
           </tr>
         </thead>
@@ -43,7 +49,7 @@ class PlayerList extends Component {
           {this.state.players.map((player, index) =>
             <tr key={index}>
               <td className="TableColumn">1</td>
-              <td className="PlayerName" onClick={() => this.invitePlayer(player.name)}>{player.name}</td>
+              <td className="PlayerName" onClick={() => this.invitePlayer(player.username)}>{player.username}</td>
               <td className="TableColumn">14</td>
             </tr>
           )}
